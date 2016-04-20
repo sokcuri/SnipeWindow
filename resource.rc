@@ -93,6 +93,7 @@ BEGIN
     CONTROL         IDB_BITMAP_FINDER_FILLED,IDC_STATIC_ICON_FINDER_TOOL,
                     "Static",SS_BITMAP | SS_NOTIFY,93,56,20,20
     LTEXT           "Finder Tool :",IDC_STATIC,7,56,64,13
+    CONTROL         "부모까지 찾아 죽이기",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,135,43,80,10
 END
 
 

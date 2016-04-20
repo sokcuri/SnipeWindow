@@ -6,6 +6,7 @@
 #define BULLSEYE_CENTER_Y_OFFSET		18
 
 HWND hStoreWnd = 0;
+bool isParentKill = true;
 
 long StartSearchWindowDialog(HWND hwndMain)
 {
@@ -421,6 +422,7 @@ BOOL CALLBACK SearchWindowDialogProc
 	{
 	case WM_INITDIALOG:
 	{
+		if (isParentKill) CheckDlgButton(hwndDlg, IDC_CHECK1, 1);
 		bRet = TRUE;
 		break;
 	}
@@ -464,10 +466,16 @@ BOOL CALLBACK SearchWindowDialogProc
 			if (hStoreWnd != hwndDlg)
 			{
 				HWND hTargetWnd = hStoreWnd;
-				while (GetParent(hTargetWnd))
+				if (IsDlgButtonChecked(hwndDlg, IDC_CHECK1))
 				{
-					hTargetWnd = GetParent(hTargetWnd);
+					while (GetParent(hTargetWnd))
+					{
+						hTargetWnd = GetParent(hTargetWnd);
+					}
+					isParentKill = true;
 				}
+				else
+					isParentKill = false;
 				SetParent(hTargetWnd, hwndDlg);
 			}
 			bRet = TRUE;
