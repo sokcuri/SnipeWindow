@@ -1,0 +1,152 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_SEARCH_WINDOW CURSOR                  "searchw.cur"
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU
+BEGIN
+    POPUP "S&earch"
+    BEGIN
+        MENUITEM "&Find Window",                IDM_FIND_WINDOW
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_SEARCH_WINDOW DIALOGEX 0, 0, 222, 204
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Search Window"
+FONT 9, "굴림", 400, 0, 0x81
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,165,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,165,24,50,14
+    LTEXT           "SetParent 트릭을 이용해 창을 삭제합니다. 창을 저격하면 아무런 경고도 없이 사라지니 주의하여 사용하시기 바랍니다. 메트로 앱은 삭제되지 않습니다. 탕탕 -@sokcuri",IDC_STATIC,7,7,152,35,SS_SUNKEN
+    LTEXT           "X Pos",IDC_STATIC,7,90,32,15
+    LTEXT           "Y Pos",IDC_STATIC,7,110,32,15
+    LTEXT           "",IDC_STATIC_X_POS,45,90,46,14
+    LTEXT           "",IDC_STATIC_Y_POS,45,110,46,14
+    EDITTEXT        IDC_EDIT_STATUS,7,130,208,67,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         IDB_BITMAP_FINDER_FILLED,IDC_STATIC_ICON_FINDER_TOOL,
+                    "Static",SS_BITMAP | SS_NOTIFY,93,56,20,20
+    LTEXT           "Finder Tool :",IDC_STATIC,7,56,64,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_SEARCH_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_FINDER_EMPTY BITMAP                  "findere.bmp"
+
+IDB_BITMAP_FINDER_FILLED BITMAP                  "finderf.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_SEARCH_WINDOW AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
